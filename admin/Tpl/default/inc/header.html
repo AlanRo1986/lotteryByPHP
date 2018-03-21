@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{$title}-后台管理-{$page_title}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="stylesheet" type="text/css" href="{$TML_PATH}css/public.css" />
+  <link rel="stylesheet" type="text/css" href="{$TML_PATH}assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="{$TML_PATH}assets/css/admin.css">
+  <!--[if (gte IE 9)|!(IE)]><!-->
+	<script src="{$TML_PATH}assets/js/jquery.min.js"></script>
+  <!--<![endif]-->
+    <script type="text/javascript">
+		var APP_ROOT = '{$APP_ROOT}';
+		var __HASH__ = '{$hashkey}';
+		var __APP__ = '{$__APP__}';
+		var VAR_MODULE = "ctl";
+		var VAR_ACTION = "act";
+		var ROOT = __APP__;
+		
+		var width = $(window).width();
+		var height = $(window).height();
+	</script> 	
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，程序不支持低版本的浏览器。 请 <a href="http://chrome.2345.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<header class="am-topbar admin-header">
+  <div class="am-topbar-brand">
+    <strong>{$title}</strong> <small>{$page_title}</small>
+  </div>
+
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          <span class="am-icon-users"></span> 管理员 {$admin_info.adm_name} 您好 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="{$__APP__}?ctl=index&act=changePwd"><span class="am-icon-user"></span> 密码修改</a></li>
+          <li><a href="{$__APP__}?ctl=index&act=set"><span class="am-icon-cog"></span> 设置</a></li>
+          <li><a href="{$__APP__}?ctl=Public&act=loginout"><span class="am-icon-power-off"></span> 退出</a></li>
+        </ul>
+      </li>
+      <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="am-cf admin-main">
+  <!-- sidebar start -->
+  <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
+    <div class="am-offcanvas-bar admin-offcanvas-bar">
+      <ul class="am-list admin-sidebar-list">
+	  {foreach from="$menu" item="list" key="key"}
+		  {if !$list.nodes}
+		  <li><a href="{$__APP__}?ctl={$key}&act={$list.key}" {if $module eq $key}style="color: #3fa9f5;"{/if}><span class="am-icon-arrow-right"></span> {$list.name}</a></li>
+		  {else}
+		  <li class="admin-parent">
+          <a class="am-cf" data-am-collapse="{target: '#{$key}'}" {if $module eq $key}style="color: #3fa9f5;"{/if}><span class="am-icon-navicon"></span> {$list.name} <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub am-in" id="{$key}">
+			{foreach from="$list.nodes" item="node"}
+            <li><a href="{$__APP__}?ctl={$node.module}&act={$node.action}" {if $action eq $node.action && $module eq $node.module}style="color: #3fa9f5;"{/if}><span class="am-icon-puzzle-piece"></span> {$node.name}</a></li>
+			 {/foreach}
+          </ul>
+        </li>
+		  {/if}
+	  {/foreach}
+       
+      </ul>
+	  
+	  <div class="am-panel am-panel-default admin-sidebar-panel">
+        <div class="am-panel-bd">
+          <p><span class="am-icon-bookmark"></span> Tip</p>
+          <p>时光静好，与君语；细水流年，与君同。</p>
+        </div>
+      </div>
+
+      <div class="am-panel am-panel-default admin-sidebar-panel">
+        <div class="am-panel-bd">
+          <p><span class="am-icon-tag"></span> LanxinBase</p>
+          <p>Welcome to the LanxinBase!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sidebar end -->
+
+  
+
+

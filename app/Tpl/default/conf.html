@@ -1,0 +1,61 @@
+{include file='inc/header.html'}
+
+{if $password}
+<div>
+    <h2>系统配置</h2>
+
+    <div class="table-responsive">
+        <form method="post" action="#" enctype="multipart/form-data" id="confForm">
+            <table class="table table-bordered">
+                <tbody>
+                {foreach from="$data" item="item"}
+                <tr>
+                    <td style="width: 300px;text-align: right"> {$item.tip}： </td>
+                    <td>
+                        {if $item.input_type eq 0}
+                        <input type="text" name="{$item.name}" class="form-control" value="{$item.content}">
+                        {elseif $item.input_type eq 1}
+                        {if $item.name eq 'password'}
+                            <input type="password" name="{$item.name}" class="form-control" value="" placeholder="不修改管理密码请留空,密码长度必须大于5">
+                        {else}
+                            <input type="password" name="{$item.name}" class="form-control" value="{$item.content}">
+                        {/if}
+                        {/if}
+                    </td>
+                </tr>
+                {/foreach}
+                <tr>
+                    <td class="textr"></td>
+                    <td><button type="submit" class="btn btn-primary" style="text-align: center;width: 200px">保存</button></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </form>
+    </div>
+</div>
+<script>
+    $(function () {
+        app.event("#confForm","submit",function () {
+            app.ajax("/conf/save",$("#confForm").serialize(),function (e) {
+                alert(e.info);
+            }).post();
+            return false;
+        })
+    })
+</script>
+
+
+{else}
+<div style="margin-top: 20%;text-align: center;">
+    <h2 style="margin-left: -80px;">请输入密码</h2>
+    <form action="/conf" method="get" id="queryForm">
+        <div class="form-inline">
+            <input type="password" name="password" class="form-control" value="" placeholder="请输入管理密码">
+            <input type="submit" value="查询" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+{/if}
+
+{include file='inc/footer.html'}

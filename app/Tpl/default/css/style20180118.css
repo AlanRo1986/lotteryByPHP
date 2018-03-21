@@ -1,0 +1,448 @@
+html{height:100%;width:100%;}
+
+body{height:100%;margin:0px;padding:0px}  
+#container{height:100%}
+.lottery{cursor: pointer}
+.container{
+    padding: 0px;
+    width: 100%;
+
+}
+.red{color: red}
+.lttery{
+    min-height: 1200px;
+    _min-width: 1170px;
+    max-width: 1170px;
+    margin: 0 auto;
+    width: 1170px;
+    _width: 100%;
+}
+.lttery .header{
+    background-image: url("/app/Tpl/default/images/20180118/first/first-section-cny-background-image.png");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    -moz-background-size:100% 100%;
+    min-height: 600px;
+    position: relative;
+}
+.lttery .header .nav2{
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.lttery .header .nav2 .logo-li{
+    width: 100px;
+    height: 72px;
+    text-align: center;
+    position: relative;
+}
+.lttery .header .nav2 li{
+    display: inline-block;
+    margin: 0 15px;
+}
+.lttery .header .nav2 li .logo{
+    height: 100%;
+    position: absolute;
+    max-height: 84px;
+    top: 24px;
+    right: 15px;
+}
+.lttery .header .nav2 li a{
+    color: #fff;
+    text-decoration: blink;
+}
+.lttery .header .nav2 li a:hover{color: #ff4f39  }
+.lttery .header .words {text-align: center;    margin-bottom: 50px;
+    margin-top: 60px;}
+.lttery .header .words img{width: 260px;}
+.lttery .header .button{text-align: center;    margin: 10px;}
+.lttery .header .button img{width: 260px;cursor: pointer;}
+.lttery .header .header-foot{
+    background-image: url(/app/Tpl/default/images/20180118/first/first-section-cny-separator-object.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    height: 110px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.lttery .second{
+    margin-bottom: 100px;
+}
+.lttery .second .explain{text-align: center;}
+.lttery .second .explain img{
+    width: 58%;
+}
+.lttery .second .prize{
+    text-align: center;
+    margin-top: 38px;
+}
+.lttery .second .prize ul{
+    padding: 0;
+}
+.lttery .second .prize ul li{
+    display: inline-block;
+    width: 33%;
+}
+.lttery .second .prize ul li .imgs{
+    height: 234px;
+    margin-bottom: 66px;
+}
+.lttery .second .prize ul li .imgs img{
+    width: 60%;
+}
+.lttery .second .prize ul li .title{
+    margin: 13px;
+    font-family: '微软雅黑';
+    height: 52px;
+}
+.lttery .second .prize ul li .title img{
+    width: 266px;
+}
+.lttery .second .prize ul li .text {
+    width: 266px;
+    margin: 0 auto;
+    height: 89px;
+    text-align: center;
+}
+.lttery .second .prize ul li .text .t{
+
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.lttery .second .prize ul li .text .content{
+    font-size: 12px;
+}
+.lttery .third{
+    background-image: url(/app/Tpl/default/images/20180118/third/third-section-cny-background-image.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    text-align: center;
+    margin-bottom: 80px;
+    min-height: 1050px;
+    margin-top: -10px;
+    position: relative;
+}
+.lttery .third .third-foot{
+    background-image: url(/app/Tpl/default/images/20180118/third/third-section-cny-separator.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    height: 315px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.lttery .third .headline{
+    position: relative;
+    margin-top: -88px;
+}
+.lttery .third .headline img{
+    width: 38%;
+}
+.lttery .third .lucky2{
+    position: relative;
+}
+.lttery .third .lucky2 .win-screen{
+    width: 13.6%;
+    position: absolute;
+    z-index: 999;
+    left: 43.4%;
+}
+.lttery .third .lucky2 .spin-button{
+    width: 18.5%;
+    position: absolute;
+    z-index: 100;
+    left: 40.6%;
+    margin-top: 430px;
+}
+.lttery .third .lucky2 .spin-board{
+    width: 52.5%;
+    position: absolute;
+    z-index: 99;
+    left: 23.8%;
+    margin-top: 230px;
+}
+.lttery .third .spin-bottom-div{
+    position: absolute;
+    bottom: 0px;
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+
+}
+.lttery .third .spin-bottom-div .spin-bottom{
+    width: 5%;
+}
+
+
+.lttery .third .lucky2 .wheel-leg{
+    width: 55%;
+    position: absolute;
+    left: 23%;
+    margin-top: 120px;
+}
+.fourth {
+    background-image: url("/app/Tpl/default/images/20180118/fourth/fourth-section-cny-background-image.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    text-align: center;
+    min-height: 865px;
+}
+
+.fourth .win-header {
+    padding-top: 168px;
+    margin-bottom: 30px;
+}
+
+.fourth .win-header img {
+    width: 49%;
+}
+
+.fourth .win-content {
+    background-image: url(/app/Tpl/default/images/20180118/fourth/fourth-section-cny-main-board-image.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    text-align: center;
+    height: 508px;
+    width: 83%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.fourth .win-content .win-list .listScrollDiv{
+    height: 80px;
+    top: 110px;
+    position: relative;
+    overflow: hidden;
+}
+.fourth .win-content .win-list .list-scroll{
+    list-style-type: none;
+    padding: 0;
+    color: #fff;
+    text-align: left;
+    margin-left: 18px;
+    width: 208px;
+    margin-top: 0px;
+}
+.fourth .win-content .win-list .list-scroll ul li{
+    margin-top: 0px;
+}
+.fourth .win-content .win-list .list-scroll ul li span{}
+.fourth .win-content .win-list {
+    background-image: url(/app/Tpl/default/images/20180118/fourth/fourth-section-cny-winner-board-object.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    text-align: center;
+    display: inline-block;
+    width: 25%;
+    height: 243px;
+    margin-top: 154px;
+    margin-left: 258px;
+}
+
+.fourth .win-content .win-explain {
+    display: inline-block;
+    width: 25%;
+    margin-top: 143px;
+}
+
+.fourth .win-content .win-explain .win-line-header {
+}
+
+.fourth .win-content .win-explain img {
+    width: 70%;
+}
+
+.fourth .win-content .win-explain .win-line-title {
+}
+
+.fourth .win-content .win-explain .win-line-content {
+    color: #fff;
+    font-size: 10px;
+    padding: 10px;
+}
+
+.fourth .win-content .win-explain .win-line-content ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style-type: none;
+    text-align: left;
+    max-height: 192px;
+    overflow: auto;
+}
+
+.fourth .win-content .win-explain .win-line-content ul li {
+    margin: 0;
+    padding: 2px 14px;
+}
+
+.fourth .win-content .win-explain .win-line-footer {
+    text-align: right;
+    padding-right: 10px;
+}
+.fifth{
+    background-image: url("/app/Tpl/default/images/20180118/fifth/fifth-section-cny-background-image.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    text-align: center;
+    min-height: 865px;
+    position: relative;
+}
+.fifth .header-image{
+    width: 100%;
+}
+
+.fifth .register-left{
+    width: 45%;
+    float: left;
+    padding-top: 0;
+}
+.fifth .register-left .reg-title{
+
+}
+.fifth .register-left .reg-title img{
+    width: 50%;
+    margin-bottom: 30px;
+}
+.fifth .register-left .reg-explain{
+    padding: 20px 58px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+}
+.fifth .register-left .reg-form{
+    width: 80%;
+    margin: 0 auto;
+}
+.fifth .register-left .reg-form input{
+    background: none;
+    border-color: #EDCF40;
+    margin: 0 auto;
+    color: #fff;
+    border-radius: 6px;
+}
+.fifth .register-left .reg-form .btn{
+    width: 60%;
+}
+.fifth .middle{
+    position: absolute;
+    height: 332px;
+    padding-left: 0;
+    top: 133px;
+    left: 46.35%;
+}
+.fifth .about-me-right{
+    float: right;
+    width: 45%;
+    padding: 40px;
+}
+.fifth .about-me-right .about-title img{
+    width: 50%;
+    margin-bottom: 30px;
+}
+.fifth .about-me-right .about-title{
+
+}
+.fifth .about-me-right .about-explain{
+    text-align: left;
+    color: #fff;
+}
+.fifth .about-me-right .about-explain p{}
+.fifth .about-me-right .btn{
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.loading{
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    z-index: 9990;
+}
+.loading i{
+    z-index: 9999;
+    position: absolute;
+    margin-top: 10%;
+}
+.loading .background{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    opacity: 0.8;
+    left: 0;
+}
+
+
+.row{    height: 100%;}
+.footer {
+        position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
+    z-index: 1111;
+}
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.container .text-muted {
+    margin: 20px 0;
+}
+.container .logo{
+	float: left;
+    margin-right: 8px;
+    height: 42px;
+    padding-top: 4px;
+}
+.container .imagesshow{display:none;position: absolute;top: 70px;margin-left: 290px;z-index:99;}
+.container .login{padding: 80px;padding-bottom: 160px;}
+.container .login .checkbox{text-align: right;}
+.row .sidebar {
+        position: absolute;
+    left: 13%;
+    z-index: 1000;
+    padding: 0 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    width: 130px;
+}
+.row .sidebar .nav-sidebar {
+    margin-right: -21px;
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+.active{    background: #fff;}
+.active a{color: #3fa9f5;}	
+
+.row .main {
+    height: 100%;
+    border: 1px solid #E7E7E7;
+    width: 100%;
+}
+.row .main h2{padding-left:20px;}
+
+.jumbotron{
+	padding-top: 10px;    box-shadow: 0px 0px 10px #B9B9B9;    background: #fff;
+}

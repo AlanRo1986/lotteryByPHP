@@ -1,0 +1,18 @@
+{include file='inc/header.html'}
+
+
+<div style="width: 200px;">
+    <form action="/user/save" method="post" id="regForm">
+        <p><input type="text" class="form-control" name="firstName" placeholder="输入姓"></p>
+        <p><input type="text" class="form-control" name="lastName" placeholder="输入名字"></p>
+        <p><input type="email" class="form-control" name="email" placeholder="输入邮箱"></p>
+        <p><input type="text" class="form-control" name="mobile" placeholder="输入手机号码"></p>
+        <p><input type="submit" class="form-control" value="注册"></p>
+    </form>
+</div>
+<div>
+   <button id="lottery">抽奖</button>
+</div>
+
+
+{include file='inc/footer.html'}

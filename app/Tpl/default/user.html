@@ -1,0 +1,96 @@
+{include file='inc/header.html'}
+
+{if $password}
+<div class="table-responsive" >
+    <h2>中奖名单</h2>
+    <div style="    padding: 20px;">
+        <form action="/user?password={$password}" method="get">
+            <div class="form-inline">
+                关键词:<input class="form-control" style="width: 200px" name="keywords" value="{$keywords}" placeholder="可输入邮箱/手机/姓名">
+                <input type="button" value="查询" onclick="queryByKeywords()" class="btn btn-default">
+
+            </div>
+        </form>
+    </div>
+
+    {if $data == false}
+    <div style="margin: 100px;color: #999999;text-align: center">Nothing...</div>
+    {/if}
+
+    <table class="table table-bordered {if $data == false}hide{/if}">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>User Name</th>
+                <th>User Email</th>
+                <th>User Mobile</th>
+                <th>Prize Name</th>
+                <th>Prized Time</th>
+                <th>Client IP</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        {foreach from="$data" item="item"}
+            <tr>
+                <th scope="row">{$item.id}</th>
+                <td>{$item.firstName} {$item.lastName}</td>
+                <td>{$item.email}</td>
+                <td>{$item.mobile}</td>
+                <td>{$item.goodsName}</td>
+                <td>{function name="to_date" p="$item.createTime"}</td>
+                <td>{$item.ipAddr}</td>
+                <td>
+                    {if $item.status == 0}
+                    <span class="label label-warning">new</span>
+                    {else}
+                    <span></span>
+                    {/if}
+                </td>
+                <td>
+                    {if $item.status == 0}
+                    <a href="#" onclick="onRead({$item.id})">get</a>
+                    {/if}
+                </td>
+            </tr>
+        {/foreach}
+        </tbody>
+    </table>
+    <div class="{if $data == false}hide{/if}">
+        <div style="float: left;margin: 20px 0;">
+            共 <span class="label label-info">{$count}</span> 条数据,
+            <span class="label label-info">{$pageCount}</span> 页
+        </div>
+        <div style="float: right">
+            {$pages}
+        </div>
+    </div>
+
+</div>
+{else}
+<div style="margin-top: 20%;text-align: center;">
+    <h2 style="margin-left: -80px;">请输入密码</h2>
+    <form action="/user" method="get" id="queryForm">
+        <div class="form-inline">
+            <input type="password" name="password" class="form-control" value="" placeholder="请输入管理密码">
+            <input type="submit" value="查询" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+{/if}
+
+<script>
+    function onRead(id) {
+        app.ajax("/user/read",{id:id},function (e) {
+            if(e.code == 1){
+                location.reload();
+            }
+        }).post();
+    }
+    function queryByKeywords() {
+        var a = $("input[name='keywords']").val();
+        location.href = "/user?keywords="+a+"&password={$password}";
+    }
+</script>
+{include file='inc/footer.html'}
